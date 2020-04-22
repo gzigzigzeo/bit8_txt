@@ -1,6 +1,6 @@
 #include "bit8_txt_font_4.h"
 
-const bit8_txt_font_t bit8_font_4 = {4, 126, {
+const bit8_txt_font_t bit8_txt_font_4 = {4, 126, {
 	//    32 ' ' |01234567|
 	 0x00, //   0|        |
 	 0x00, //   1|        |

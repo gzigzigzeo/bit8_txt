@@ -13,7 +13,7 @@ extern "C" {
 typedef struct {
   uint8_t* buf;
   uint8_t size;
-} bit8_txt_buffer;
+} bit8_txt_buf_t;
 
 // Font, height == 8 bit
 typedef struct {
@@ -22,8 +22,8 @@ typedef struct {
 	uint8_t bitmap[];
 } bit8_txt_font_t;
 
-void bit8_txt_clear_buffer(bit8_txt_buffer* buf);
-void bit8_txt_puts(bit8_txt_buffer *buf, const ssd1306_font_t* font, char* message)
+void bit8_txt_clear_buffer(bit8_txt_buf_t *buf);
+void bit8_txt_puts(bit8_txt_buf_t *buf, const bit8_txt_font_t *font, char *message);
 
 #ifdef __cplusplus
 }

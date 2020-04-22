@@ -26,6 +26,6 @@
 
 #include "bit8_txt.h"
 
-extern const bit8_txt_font_t ssd1306_font_4;
+extern const bit8_txt_font_t bit8_txt_font_4;
 
 #endif
