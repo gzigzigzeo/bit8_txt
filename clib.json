@@ -12,5 +12,9 @@
   ],
   "license": "MIT",
   "src": [
+    "bit8_txt.c",
+    "bit8_txt.h",
+    "bit8_txt_font_4.c",
+    "bit8_txt_font_4.h"
   ]
 }
