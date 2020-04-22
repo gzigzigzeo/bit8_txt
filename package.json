@@ -1,0 +1,16 @@
+{
+  "name": "bit8_txt",
+  "version": "1.0.0",
+  "repo": "gzigzigzeo/bit8_txt",
+  "description": "Draw text using 8 bit fonts into software buffer",
+  "keywords": [
+    "mcu",
+    "ssd1306",
+    "stm32",
+    "arduino",
+    "display"
+  ],
+  "license": "MIT",
+  "src": [
+  ]
+}
