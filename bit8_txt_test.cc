@@ -4,7 +4,6 @@ using namespace std;
 using Buf128 = txt8::Txt8<128>;
 
 int main() {
-  Buf128 b;
-  b.Clear();
+  Buf128::Clear();
   return 0;
 }

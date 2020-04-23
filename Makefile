@@ -1,13 +1,17 @@
-csrc = $(wildcard *.c)
-ccsrc = $(wildcard *.cc)
-obj = $(csrc:.c=.o) $(ccsrc:.cc=.o)
+TARGET = bit8_test
 
-test: $(obj)
-	$(CXX) -std=c++11 -o $@ $^ $(LDFLAGS)
+OBJS += $(wildcard *.c)
+OBJS += $(wildcard *.cc)
+
+CFLAGS = -std=c++11
+
+.PHONY: all
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) $^ $(LFLAGS) -o $@
 
 .PHONY: clean
-
 clean:
-	rm -f $(obj)
-	rm -f $(TARGET).elf
-
+	rm -f $(wildcard *.o)
+	rm -f $(TARGET)

@@ -21,11 +21,13 @@
 // COPYRIGHT "Copyright 1999 by Thomas A. Fine"
 // Converted Font Size 4x8
 
-#ifndef __BIT8_FONT_4
-#define __BIT8_FONT_4
+#ifndef __TXT8_FONT_4
+#define __TXT8_FONT_4
 
-#include "bit8_txt.h"
+#include "txt8.h"
 
-extern const bit8_txt_font_t bit8_txt_font_4;
+namespace txt8 {
+  extern const font font4;
+}
 
 #endif

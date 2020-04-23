@@ -7,18 +7,12 @@
 #include <string.h>
 
 namespace txt8 {
-// // Buffer definition
-// typedef struct {
-//   uint8_t* buf;
-//   uint8_t size;
-// } bit8_txt_buf_t;
-
-// // Font, height == 8 bit
-// typedef struct {
-// 	uint8_t width;
-// 	uint8_t last_char;
-// 	uint8_t bitmap[];
-// } bit8_txt_font_t;
+// Font, height == 8 bit
+typedef struct {
+	uint8_t width;
+	uint8_t last_char;
+	uint8_t bitmap[];
+} font_t;
 
 // enum BIT8_TXT_MODE = {
 //   BIT8_TXT_MODE_UNDERLINE = 0b00001, // \1
@@ -28,23 +22,37 @@ namespace txt8 {
 //   BIT8_TXT_MODE_NORMAL    = 0b10000  // \16
 // };
 
-template <int N>
+template<int N> // N == number of bytes in a buffer
 class Txt8 {
 public:
+  static uint8_t buf[N];
+
   // Clears current buffer
-  void Clear();
+  static void Clear()
+  {
+    memset(buf, 0, N);
+  }
 
   // Draws string into buffer and returns pointer to the last char drawn
-  //char *puts(char *message);
-private:
-  uint8_t buf[N];
+  static char *Echo(char *message)
+  {
+    Clear();
+
+    char* msg_p = message;         // Current char pointer
+    char* font_p = NULL;           // Pointer to current char font bitmap
+    char* max_p = msg_p + (N / 8); // Pointer to max possible char in the message
+    char c;
+
+    while ((c = *msg_p++) && (msg_p < max_p)) {
+
+    }
+
+    return msg_p;
+  }
 };
 
-template <int N>
-void Txt8<N>::Clear() {
-  memset(buf, 0, sizeof(buf));
-};
+template<int N> uint8_t Txt8<N>::buf[N];
 
-};
+}
 
 #endif

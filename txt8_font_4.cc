@@ -1,6 +1,8 @@
-#include "bit8_txt_font_4.h"
+#include "txt8_font_4.h"
 
-const bit8_txt_font_t bit8_txt_font_4 = {4, 126, {
+namespace txt8 {
+
+const font font_4 = {4, 126, {
 	//    32 ' ' |01234567|
 	 0x00, //   0|        |
 	 0x00, //   1|        |
@@ -571,3 +573,5 @@ const bit8_txt_font_t bit8_txt_font_4 = {4, 126, {
 	 0x08, //   2|    #   |
 	 0x00, //   3|        |
 }};
+
+}
