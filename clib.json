@@ -1,7 +1,7 @@
 {
-  "name": "bit8_txt",
+  "name": "txt8",
   "version": "1.0.0",
-  "repo": "gzigzigzeo/bit8_txt",
+  "repo": "gzigzigzeo/txt8",
   "description": "Draw text using 8 bit fonts into software buffer",
   "keywords": [
     "mcu",
@@ -12,9 +12,8 @@
   ],
   "license": "MIT",
   "src": [
-    "bit8_txt.c",
-    "bit8_txt.h",
-    "bit8_txt_font_4.c",
-    "bit8_txt_font_4.h"
+    "txt8.h",
+    "txt8_font4.cc",
+    "txt8_font4.h"
   ]
 }

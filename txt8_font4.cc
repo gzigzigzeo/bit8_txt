@@ -1,8 +1,8 @@
-#include "txt8_font_4.h"
+#include "txt8_font4.h"
 
 namespace txt8 {
 
-const font font_4 = {4, 126, {
+static const uint8_t font4_bitmap[] = {
 	//    32 ' ' |01234567|
 	 0x00, //   0|        |
 	 0x00, //   1|        |
@@ -572,6 +572,8 @@ const font font_4 = {4, 126, {
 	 0x0C, //   1|    ##  |
 	 0x08, //   2|    #   |
 	 0x00, //   3|        |
-}};
+};
+
+const Font Font4 = {4, 126, (uint8_t *)font4_bitmap};
 
 }

@@ -9,7 +9,7 @@ CFLAGS = -std=c++11
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) $^ $(LFLAGS) -o $@
+	$(CXX) $(CFLAGS) $^ $(LFLAGS) -o $@
 
 .PHONY: clean
 clean:

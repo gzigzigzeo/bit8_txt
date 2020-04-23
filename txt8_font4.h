@@ -27,7 +27,9 @@
 #include "txt8.h"
 
 namespace txt8 {
-  extern const font font4;
+
+  extern const Font Font4;
+
 }
 
 #endif
