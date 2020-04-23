@@ -42,5 +42,7 @@ int main() {
   test_Clear();
   test_Echo_normal();
   test_Echo_mode_inverted();
+
+  screen.ProgressBar(20);
   return 0;
 }

@@ -92,29 +92,3 @@ template<int N> uint8_t Txt8<N>::buf[N];
 }
 
 #endif
-
-
-// 	while((*c != 0) && (message - c < buf->size / font->width)) {
-// 		char current_char = *c;
-
-// 		if (current_char < ' ') {
-// 		  mask = 0x1;
-// 		  c++;
-// 		  continue;
-// 		}
-
-// 		if ((current_char > font->last_char) || (current_char < ' ')) {
-// 			current_char = ' ';
-// 		}
-
-// 		current_char -= ' ';
-
-// //memcpy(buffer_pointer, font_bitmap + (current_char * font->width), font->width);
-// 		for (char* b = font_bitmap + (current_char * font->width); b < font_bitmap + (current_char * font->width) + font->width; b++) {
-// 			*(buffer_pointer++) = (*b) | mask;
-// 		};
-
-// 		//buffer_pointer += font->width;
-
-// 		c++;
-// 	}
