@@ -15,12 +15,14 @@ typedef struct {
 	uint8_t* bitmap;
 } Font;
 
+// Display mode. Mode is bitmasks, so, you may combine bits.
+// \9 would be inverted strike through, for example.
 enum Mode {
-  Normal        = 0b11111, // \31
   Inverted      = 0b00001, // \1
   Underline     = 0b00010, // \2
   Overline      = 0b00100, // \4
-  StrikeThrough = 0b01000  // \8
+  StrikeThrough = 0b01000, // \8
+  Normal        = 0b10000, // \16
 };
 
 template<int N> // N == number of bytes in a buffer
@@ -63,19 +65,19 @@ public:
       for (uint8_t x = 0; x < font->width; x++) {
         uint8_t res_c = *(font_p++);
 
-        if (mode == Inverted) {
+        if (mode & Inverted) {
           res_c = ~res_c;
         }
 
-        if (mode == Underline) {
+        if (mode & Underline) {
           res_c |= 0b10000001;
         }
 
-        if (mode == Overline) {
+        if (mode & Overline) {
           res_c |= 0b10000000;
         }
 
-        if (mode == StrikeThrough) {
+        if (mode & StrikeThrough) {
           res_c |= 0b00010000;
         }
 
