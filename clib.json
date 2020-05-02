@@ -13,6 +13,7 @@
   "license": "MIT",
   "src": [
     "txt8.h",
+    "txt8_impl.hpp",
     "txt8_font4.cxx",
     "txt8_font4.h"
   ]
