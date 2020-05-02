@@ -31,15 +31,15 @@ public:
   static uint8_t buf[N];
 
   // Clears current buffer
-  static void Clear()
+  static void clear()
   {
     memset(buf, 0, N);
   }
 
   // Draws string into buffer and returns pointer to the last char drawn
-  static const char *Echo(const char *message, const Font* font)
+  static const char *echo(const char *message, const Font* font)
   {
-    Clear();
+    clear();
 
     uint8_t* msg_p = (uint8_t*)message; // Current char pointer
 

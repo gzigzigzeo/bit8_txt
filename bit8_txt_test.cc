@@ -11,13 +11,13 @@ static Buf128 screen;
 
 void test_Clear() {
   screen.buf[0] = 1;
-  screen.Clear();
+  screen.clear();
   assert(screen.buf[0] == 0);
   cout << "txt8::Txt8::Clear() passed.\n";
 }
 
 void test_Echo_normal() {
-  screen.Echo("1", &txt8::Font4);
+  screen.echo("1", &txt8::Font4);
 
   assert(screen.buf[0] == 0x44);
   assert(screen.buf[1] == 0x7E);
@@ -28,7 +28,7 @@ void test_Echo_normal() {
 }
 
 void test_Echo_mode_inverted() {
-  screen.Echo("\1 ", &txt8::Font4);
+  screen.echo("\1 ", &txt8::Font4);
 
   assert(screen.buf[0] == 0xFF);
   assert(screen.buf[1] == 0xFF);
