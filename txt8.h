@@ -30,6 +30,7 @@ template<int N>
 class Txt8 {
 public:
   static uint8_t buf[N];
+  static constexpr int size = N;
 
   // Clears current buffer
   static void clear();
