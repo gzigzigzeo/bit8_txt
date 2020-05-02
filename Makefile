@@ -1,7 +1,7 @@
 TARGET = bit8_test
 
 OBJS += $(wildcard *.c)
-OBJS += $(wildcard *.cc)
+OBJS += $(wildcard *.cxx)
 
 CFLAGS = -std=c++11
 
