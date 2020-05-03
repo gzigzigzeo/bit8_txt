@@ -28,6 +28,12 @@ const char *Txt8<N>::echo(const char *message, const Font *font)
       continue;
     }
 
+    // Unknown character
+    if (c - ' ' > font->char_count) {
+      c = ' ';
+      continue;
+    }
+
     // Start of a char in a font
     font_p = font->bitmap + ((c - ' ') * font->width);
 
